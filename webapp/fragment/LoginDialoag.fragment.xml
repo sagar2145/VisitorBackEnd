@@ -1,0 +1,30 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:form="sap.ui.layout.form" id="logInFrag"
+	controllerName="com.incture.cherrywork.GuestManagmentSystem.controller.HomePage"
+	>
+	<Dialog class="MyDialog" id="LoginDialog" horizontalScrolling="false" xmlns:f="sap.f" title="Log In" draggable="true"
+		stretch="false">
+		<VBox class="LoginBox">
+			<HBox class="fildBox">
+				<HBox class="fieldBoxItems">
+					<core:Icon src="sap-icon://customer" class="size2" color="#031E48">
+					</core:Icon>
+				</HBox>
+				<HBox class="fieldBoxItems">
+					<Input class="LoginInputFiled" id="Username"></Input>
+				</HBox>
+			</HBox>
+			<HBox class="fildBox">
+				<HBox class="fieldBoxItems">
+					<core:Icon src="sap-icon://locked" class="size2" color="#031E48">
+					</core:Icon>
+				</HBox>
+				<HBox class="fieldBoxItems">
+					<Input class="LoginInputFiled" type="Password" id="Password"></Input>
+				</HBox>
+			</HBox>
+			<HBox class="LoginBtnBox">
+				<Button text="Submit" class="LoginBtn" press="onLogIn"></Button>
+			</HBox>
+		</VBox>
+	</Dialog>
+</core:FragmentDefinition>

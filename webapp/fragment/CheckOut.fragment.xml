@@ -1,0 +1,16 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:form="sap.ui.layout.form" id="checkOutFrag">
+	<Dialog class="CheckOutBox" id="CheckOutDialog" showHeader="false" horizontalScrolling="false" xmlns:f="sap.f" title="LOGIN" draggable="true"
+		stretch="false">
+		<VBox class="LoginBox">
+			<HBox class="CheckOutLableBox">
+				<Label class="checkOutLalel" text="Enter Your Mobile No"></Label>
+			</HBox>
+			<HBox>
+				<Input class="LoginInputFiled" id="checkOut"></Input>
+			</HBox>
+			<HBox class="CheckOutSubmitBox">
+				<Button text="Submit" class="checkOutSubmitBtn" press="onSubmitCheckOut"></Button>
+			</HBox>
+		</VBox>
+	</Dialog>
+</core:FragmentDefinition>

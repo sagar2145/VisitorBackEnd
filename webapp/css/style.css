@@ -1,0 +1,308 @@
+/* Home Page CSS */
+
+.mainPage {
+    background-image: url('../img/backgroundImage.png');
+    background-size: 100% 100%;
+    height: 100%;
+}
+
+.sapMShellBrandingBar {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 0px;
+    z-index: 1;
+    background-color: none;
+}
+
+.userLogin {
+    height: 40px;
+    max-width: 40px;
+    position: absolute;
+    right: 25px;
+    top: 15px;
+    color: #a54b19 !important;
+}
+
+.CheckOut {
+    height: 45px !important;
+    max-width: 150px;
+    position: absolute;
+    right: 40%;
+    top: 16rem;
+    padding: 0px;
+    border: dashed #a54b19 2px !important;
+    border-radius: 10px;
+}
+
+.CheckIn {
+    height: 45px !important;
+    max-width: 150px;
+    position: absolute;
+    right: 50%;
+    top: 16rem;
+    padding: 0px;
+    border: dashed #a54b19 2px !important;
+    border-radius: 10px;
+}
+
+.CheckOut:hover {
+    opacity: 0.7;
+}
+
+.CheckIn:hover {
+    opacity: 0.6;
+}
+
+.CheckOut,
+.CheckIn,
+.sapMBtnTransparent {
+    color: White !important;
+    font-weight: bold;
+    text-shadow: none;
+}
+
+.userLogin .sapMBtnTransparent>.sapMBtnIcon,
+:not(.sapMBtnDisabled) .sapMBtnGhost>.sapMBtnIcon {
+    color: #a54b19 !important;
+    font-size: 2.0rem;
+}
+
+
+/* Login Fragment CSS */
+
+.sapUiSizeCompact {
+    width: 30%;
+}
+
+.LoginBox {
+    padding: 30px;
+}
+
+.fildBox {
+    border: 2px gray solid;
+    margin: 10px;
+}
+
+.LoginInputFiled {
+    width: 17rem !important;
+}
+
+.LoginBtnBox {
+    margin: 10px;
+}
+
+.LoginBtnBox .sapMBtn .sapMBtnInner,
+.sapMBtn .LoginBtn {
+    background: #58b879 !important;
+    color: white;
+    width: 19.9rem !important;
+}
+
+.LoginInputFiled .sapMInputBaseContentWrapper {
+    border: none;
+}
+
+.fieldBoxItems .sapMFlexItemAlignAuto {
+    border-left: 1px black solid !important;
+}
+
+.LoginInputFiled .sapUiSizeCompact .sapMInputBaseContentWrapper {
+    max-height: 2.8rem !important;
+    border: none !important;
+    border-left: 1px black solid;
+}
+
+.fieldBoxItems {
+    min-width: 44px;
+}
+
+.size2 {
+    font-size: 1.9rem;
+    max-width: 15px !important;
+    margin: 5px 7px 5px;
+}
+
+.MyDialog>header:last-of-type .sapMIBar {
+    background: #3e3d7a;
+    color: White;
+}
+
+.sapMDialog>header.sapMDialogTitle .sapMTitle {
+    color: White;
+}
+
+
+/* formDetails CSS */
+
+.banner {
+    background-image: url('../img/banner.jpg');
+    background-size: 100% 100%;
+    height: 40%;
+    position: relative;
+}
+
+.nextPageBtn,
+.sapMBtnIcon {
+    position: absolute !important;
+    right: 4px !important;
+    top: 0px !important;
+    color: white !important;
+}
+
+.BackPageBtn,
+.sapMBtnIcon {
+    position: absolute !important;
+    left: 4px !important;
+    top: 0px !important;
+    color: white !important;
+}
+
+.formDetails {
+    padding: 10px 40px 10px;
+}
+
+.formPanel > .sapMTB-Transparent-CTX.sapMTB {
+    background: #3e3d7a !important;
+}
+
+.formHeaderLable {
+    font-weight: bold;
+    color: white;
+}
+
+.formPanel > .sapMPanelContent:not(.sapMPanelBGTransparent) {
+    border: 1px solid #cccccc;
+}
+
+.formPanel > .sapMIBar>.sapMBarChild:last-child {
+    position: absolute;
+    right: 0px;
+    color: white !important;
+}
+
+.formSubmitBtn .sapMBtnInner {
+    background: #58b879 !important;
+    color: white !important;
+}
+
+
+/* SuccessMessage Fragment CSS */
+
+.messageBox {
+    width: 50% !important;
+}
+
+.SuccessMessage {
+    padding: 20px;
+}
+
+.successMessageIcon {
+    padding: 1% 45% 1%;
+}
+
+.successText {
+    color: Black !important;
+    font-weight: bold !important;
+    margin: 1% 5% 1%;
+    font-size: 17px !important;
+}
+
+.suceesTextF {
+    margin: 1% 27% 1%;
+}
+
+.successIcon {
+    color: #58b879 !important;
+    font-size: 3rem;
+}
+
+.VisitorNameLable {
+    font-weight: bold;
+    color: White;
+    position: absolute !important;
+    top: 12rem;
+    left: 43%;
+    text-align: center !important;
+}
+
+.checkOutSubmitBtn .sapMBtnInner {
+    background: #58b879 !important;
+    color: white !important;
+}
+
+.CheckOutSubmitBox {
+    padding: 1% 37% 1%;
+}
+
+.CheckOutLableBox {
+    padding: 1% 27% 1%;
+}
+
+.checkOutLalel {
+    font-weight: bold;
+    color: black;
+}
+
+
+/* VisitorDetailsReport CSS */
+
+.LeftReportBox {
+    height: 100%;
+    background: #262626 !important;
+}
+
+.RightReportBox {}
+
+.VDetailUserLableBox {
+    margin: 10px;
+    padding: 10% 10% 10%;
+}
+
+.VDetailsLable {
+    color: White;
+    margin-left: 20%;
+    font-size: 20px;
+}
+
+.todayVisitorBox {
+    height: 10%;
+    background: #e86329;
+    padding: 5% 20% 5%;
+}
+
+.TableStatusIcon {
+    font-size: 10px !important;
+    margin-right: 5px;
+}
+
+.TableUserIcon {
+    font-size: 20px !important;
+    margin-right: 5px;
+    font-weight: bold;
+}
+
+.myClass {
+    text-align: center;
+}
+
+@media (max-width:599px) {
+    .LoginInputFiled {
+        width: 12rem !important;
+    }
+    .LoginBtnBox .sapMBtn .sapMBtnInner,
+    .sapMBtn .LoginBtn {
+        width: 14.9rem !important;
+    }
+    .CheckOut {
+        right: 20%;
+    }
+    .CheckIn {
+        right: 60%;
+    }
+    .size2 {
+        font-size: 2rem;
+        margin-right: 2px;
+    }
+}

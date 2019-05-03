@@ -1,0 +1,12 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:form="sap.ui.layout.form" id="myDialog">
+	<Dialog class="messageBox" showHeader="false" id="sampledialog" horizontalScrolling="false" xmlns:f="sap.f" title="LOGIN" draggable="true"
+		stretch="false">
+		<VBox class="SuccessMessage" alignContent="Center">
+			<HBox class="successMessageIcon">
+				<core:Icon src="sap-icon://sys-enter" class="successIcon" color="#031E48"></core:Icon>
+			</HBox>
+			<Text class="successText suceesTextF" text="Thanks your number is verified"/>
+			<Text class="successText" text="Now sit back and wait while your host comes and receives you"/>
+		</VBox>
+	</Dialog>
+</core:FragmentDefinition>

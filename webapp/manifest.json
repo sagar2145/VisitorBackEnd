@@ -1,0 +1,120 @@
+{
+	"_version": "1.8.0",
+	"sap.app": {
+		"id": "com.incture.cherrywork.GuestManagmentSystem",
+		"type": "application",
+		"i18n": "i18n/i18n.properties",
+		"applicationVersion": {
+			"version": "1.0.0"
+		},
+		"title": "{{appTitle}}",
+		"description": "{{appDescription}}",
+		"sourceTemplate": {
+			"id": "ui5template.basicSAPUI5ApplicationProject",
+			"version": "1.40.12"
+		}
+	},
+	"sap.ui": {
+		"technology": "UI5",
+		"icons": {
+			"icon": "",
+			"favIcon": "",
+			"phone": "",
+			"phone@2": "",
+			"tablet": "",
+			"tablet@2": ""
+		},
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		},
+		"supportedThemes": [
+			"sap_hcb",
+			"sap_belize"
+		]
+	},
+	"sap.ui5": {
+		"rootView": {
+			"viewName": "com.incture.cherrywork.GuestManagmentSystem.view.HomePage",
+			"type": "XML"
+		},
+		"dependencies": {
+			"minUI5Version": "1.30.0",
+			"libs": {
+				"sap.ui.layout": {},
+				"sap.ui.core": {},
+				"sap.m": {}
+			}
+		},
+		"contentDensities": {
+			"compact": true,
+			"cozy": true
+		},
+		"models": {
+			"i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"settings": {
+					"bundleName": "com.incture.cherrywork.GuestManagmentSystem.i18n.i18n"
+				}
+			}
+		},
+		"resources": {
+			"css": [
+				{
+					"uri": "css/style.css"
+				}
+			]
+		},
+		"routing": {
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+				"viewType": "XML",
+				"async": true,
+				"viewPath": "com.incture.cherrywork.GuestManagmentSystem.view",
+				"controlAggregation": "pages",
+				"controlId": "idAppControl",
+				"clearControlAggregation": false
+			},
+			"routes": [
+				{
+					"name": "RouteHomePage",
+					"pattern": "RouteHomePage",
+					"target": [
+						"TargetHomePage"
+					]
+				},
+				{
+					"name": "GuestDetailsForm",
+					"pattern": "GuestDetailsForm",
+					"target": [
+						"formDetails"
+					]
+				},
+				{
+					"name": "VisitorDetailsReport",
+					"pattern": "VisitorDetailsReport",
+					"target": [
+						"VisitorDetailsReport"
+					]
+				}
+			],
+			"targets": {
+				"TargetHomePage": {
+					"viewType": "XML",
+					"transition": "slide",
+					"clearControlAggregation": false,
+					"viewName": "HomePage"
+				},
+				"formDetails": {
+					"viewType": "XML",
+					"viewName": "formDetails"
+				},
+				"VisitorDetailsReport": {
+					"viewType": "XML",
+					"viewName": "VisitorDetailsReport"
+				}
+			}
+		}
+	}
+}

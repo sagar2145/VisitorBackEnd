@@ -1,0 +1,18 @@
+<mvc:View controllerName="com.incture.cherrywork.GuestManagmentSystem.controller.HomePage" xmlns:html="http://www.w3.org/1999/xhtml"
+	xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
+	<App id="idAppControl">
+		<pages>
+			<Page title="{i18n>title}" showHeader="false">
+				<content >
+					<!-- Home Page Body -->
+					<VBox class="mainPage">
+						<Button class="userLogin size3" type="Transparent" icon="sap-icon://customer" press="logIn"></Button>
+						<Button class="CheckIn" type="Transparent" press="onCheckIn" text="Check In"></Button>
+						<Button class="CheckOut" type="Transparent" text="Check Out" press="onCheckOut"></Button>
+					</VBox>
+					<!-- Home Page Body End -->
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

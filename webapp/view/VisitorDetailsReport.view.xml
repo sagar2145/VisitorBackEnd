@@ -1,0 +1,103 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:f="sap.f"
+	controllerName="com.incture.cherrywork.GuestManagmentSystem.controller.VisitorDetailsReport" xmlns:html="http://www.w3.org/1999/xhtml">
+	<App>
+		<pages>
+			<Page title="Title" showHeader="false">
+				<content>
+					<!-- Split Layout  -->
+					<SplitApp id="SplitAppDemo" initialDetail="detail" initialMaster="master" orientationChange="onOrientationChange">
+						<detailPages>
+							<Page id="detail" title="" showHeader="fal" class="sapUiStdPage">
+								<content>
+									<!-- Visitors Details Table  -->
+									<Table id="idProductsTable" inset="false" items="{oVisitorGetDataModel>/oVisitorList}">
+										<headerToolbar>
+											<Toolbar>
+												<content>
+													<Title text="{ path: 'oVisitorGetDataModel>/date', type: 'sap.ui.model.type.Date', formatOptions: { style: 'medium' } }" level="H2"/>
+													<ToolbarSpacer/>
+													<SearchField width="20%"></SearchField>
+												</content>
+											</Toolbar>
+										</headerToolbar>
+										<columns>
+											<Column width="5em">
+												<Text text="Name"/>
+											</Column>
+											<Column minScreenWidth="Tablet" hAlign="Begin">
+												<Text text="Contact Number"/>
+											</Column>
+											<Column minScreenWidth="Desktop" demandPopin="true" hAlign="Center">
+												<Text text="Email"/>
+											</Column>
+											<Column minScreenWidth="Desktop" demandPopin="true" hAlign="Center">
+												<Text text="Purpose"/>
+											</Column>
+											<Column hAlign="Center">
+												<Text text="Hostname"/>
+											</Column>
+											<Column hAlign="Center">
+												<Text text="Check In"/>
+											</Column>
+											<Column hAlign="Center">
+												<Text text="Check Out"/>
+											</Column>
+											<Column hAlign="Begin">
+												<Text text="Status"/>
+											</Column>
+										</columns>
+										<items>
+											<ColumnListItem>
+												<cells>
+													<HBox>
+														<core:Icon class="TableUserIcon" color="#3e3d7a" src="sap-icon://customer"></core:Icon>
+														<Text text="{oVisitorGetDataModel>name}"></Text>
+													</HBox>
+													<Text text="{oVisitorGetDataModel>phoneNumber}"></Text>
+													<Text text="{oVisitorGetDataModel>email}"></Text>
+													<Text text="{oVisitorGetDataModel>purpose}"></Text>
+													<Text text="{oVisitorGetDataModel>hostName}"></Text>
+													<Text text="{oVisitorGetDataModel>checkin}"></Text>
+													<Text text="{oVisitorGetDataModel>checkout}"></Text>
+													<VBox>
+														<HBox>
+															<core:Icon class="TableStatusIcon" color="#68d68b" src="sap-icon://busy"
+																visible="{=${oVisitorGetDataModel>status} === 'COMPLETED' ? true : false}"></core:Icon>
+															<core:Icon class="TableStatusIcon" color="yellow" src="sap-icon://busy"
+																visible="{=${oVisitorGetDataModel>status} === 'pending' ? true : false}"></core:Icon>
+															<Text text="Pending" visible="{=${oVisitorGetDataModel>status} === 'pending' ? true : false}"></Text>
+															<Text text="Completed" visible="{=${oVisitorGetDataModel>status} === 'COMPLETED' ? true : false}"></Text>
+														</HBox>
+													</VBox>
+												</cells>
+											</ColumnListItem>
+										</items>
+									</Table>
+									<!-- Visitors Details Table End -->
+								</content>
+							</Page>
+						</detailPages>
+						<!-- Master Page Left Hand Side -->
+						<masterPages >
+							<Page id="master" showHeader="false" title="Master 1">
+								<content >
+									<VBox class="LeftReportBox">
+										<HBox class="VDetailUserLableBox" alignItems="Center">
+											<f:Avatar src="./img/userimage.png" displaySize="M" displayShape="Circle"></f:Avatar>
+											<Label class="VDetailsLable" text="Username"></Label>
+										</HBox>
+										<HBox class="todayVisitorBox">
+											<Label class="VDetailsLable" text="Today's Visitor"></Label>
+										</HBox>
+									</VBox>
+								</content>
+							</Page>
+						</masterPages>
+						<!-- Master Page Left Hand Side End -->
+					</SplitApp>
+					<!-- Spit Layout End -->
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

@@ -1,0 +1,68 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m"
+	controllerName="com.incture.cherrywork.GuestManagmentSystem.controller.formDetails" xmlns:html="http://www.w3.org/1999/xhtml"
+	xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form">
+	<App>
+		<pages>
+			<Page title="Title" showHeader="false">
+				<content>
+					<!-- Top Banner -->
+					<VBox class="banner">
+						<Button type="Transparent" press="onBackToHomePage" class="BackPageBtn" icon="sap-icon://nav-back"></Button>
+						<Button type="Transparent" press="onGoToReportPage" class="nextPageBtn" icon="sap-icon://navigation-right-arrow"></Button>
+						
+						<VBox>
+							<Text class="VisitorNameLable" textAlign="Center" id="getValue" text=" "/>
+							<Text class="VisitorNameLable" textAlign="Center" id="getProperty" text="{/InputValue}"/>
+						</VBox>
+					</VBox>
+					<!-- Top Banner  End-->
+					<!-- Form Panel -->
+					<Panel width="auto" class="formPanel sapUiResponsiveMargin " accessibleRole="Region">
+						<headerToolbar class="formHeader">
+							<Toolbar height="3rem">
+								<Title class="formHeaderLable" text="Details"/>
+								<content>
+									<Button text="Submit" class="formSubmitBtn" press="onSubmitForm"></Button>
+								</content>
+							</Toolbar>
+						</headerToolbar>
+						<content class="formPanelbody">
+							<!-- Form Fields -->
+							<f:SimpleForm id="SimpleFormChange354wide" editable="true" layout="ResponsiveGridLayout" labelSpanXL="4" labelSpanL="2" labelSpanM="4"
+								labelSpanS="12" adjustLabelSpan="false" emptySpanXL="0" emptySpanL="1" emptySpanM="0" emptySpanS="0" columnsXL="2" columnsL="1" columnsM="1"
+								singleContainerFullSize="false">
+								<f:content>
+									<Label text="Name"/>
+									<Input id="name" value="{/InputValue}" valueLiveUpdate="{/ValueLiveUpdate}" liveChange="handleLiveChange"/>
+									<Label text="Email"/>
+									<Input id="email"></Input>
+									<Label text="Phone"/>
+									<Input id="pnumber"></Input>
+									<Label text="Purpose"/>
+									<Select id="purpose">
+										<items>
+											<core:Item text="Business" key="Business"/>
+											<core:Item text="Interview" key="Interview"/>
+											<core:Item text="Personal Visit" key="Personal Visit"/>
+										</items>
+									</Select>
+									<Label text="Hostname"/>
+									<Select id="hostName">
+										<items>
+											<core:Item text="HR Manager" key="HR Manager"/>
+											<core:Item text="Admin" key="Admin"/>
+											<core:Item text="CEO" key="SEO"/>
+											<core:Item text="Director" key="Director"/>
+										</items>
+									</Select>
+								</f:content>
+							</f:SimpleForm>
+							<!-- Form Fields End -->
+						</content>
+					</Panel>
+					<!-- Form Panel End -->
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>
